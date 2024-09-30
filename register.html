@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录页面</title>
+    <title>注册新账号</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
             height: 100vh;
             margin: 0;
         }
-        .login-container {
+        .container {
             background-color: white;
             padding: 2rem;
             border-radius: 8px;
@@ -59,7 +59,6 @@
         .additional-options a {
             color: #007bff;
             text-decoration: none;
-            margin: 0 0.5rem;
             font-size: 0.9rem;
         }
         .additional-options a:hover {
@@ -68,20 +67,25 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>用户登录</h1>
-        <form action="/login" method="post">
+    <div class="container">
+        <h1>注册新账号</h1>
+        <form action="/register" method="post">
             <label for="username">用户名：</label>
             <input type="text" id="username" name="username" required>
+            
+            <label for="email">电子邮箱：</label>
+            <input type="email" id="email" name="email" required>
             
             <label for="password">密码：</label>
             <input type="password" id="password" name="password" required>
             
-            <button type="submit">登录</button>
+            <label for="confirm-password">确认密码：</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            
+            <button type="submit">注册</button>
         </form>
         <div class="additional-options">
-            <a href="/forgot-password">忘记密码</a>
-            <a href="/register">注册新账号</a>
+            <a href="/login.html">已有账号？立即登录</a>
         </div>
     </div>
 </body>
